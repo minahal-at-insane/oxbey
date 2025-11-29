@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../assets/logo.png';
+import { Link } from "react-router-dom";
 
 export default function Menu() {
 
@@ -31,6 +32,7 @@ export default function Menu() {
             <li><a href="/" className=''>Autonomous Ai</a></li>
             <li><a href="#tokenomics" className=''>Tokenomics</a></li>
             <li><a href="#roadmap" className=''>Roadmap</a></li>
+             <Link to="/contact">Contact</Link>
           </ul>
         </nav>
 
