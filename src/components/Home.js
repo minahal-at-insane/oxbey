@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import Menu from './Menu'
-import bottom from '../assets/bottom.png';
-import feature1 from '../assets/feature1.png';
+import img1 from '../assets/img1.gif';
 import feature2 from '../assets/feature2.png';
 import feature3 from '../assets/feature3.png';
 import feature4 from '../assets/feature4.png';
@@ -20,6 +19,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 // import Roadmap from './Roadmap';
 import Faq from './Faq';
+import ImageSlider from './ImageSlider';
 
 
 export default function Home() {
@@ -54,28 +54,28 @@ export default function Home() {
     ];
 
     return (
-        <div className="font-poppins overflow-hidden">
+        <div className="font-poppins overflow-hidden text-black-50">
 
             <Menu />
 
             {/* features section */}
 
-            <section id='features' className="lg:px-20 px-5 lg:py-20 py-6">
+            <section className="lg:px-20 px-5 lg:py-12 py-6">
                 <div className='container mx-auto'>
 
                     <div className='flex flex-wrap flex-row-reverse items-center justify-between mx-auto md:mt-20 mt-12 lg:space-y-0 space-y-12'>
-                        <div data-aos='zoom-in' className="lg:w-5/12 w-full img-item">
-                            <img data-aos='zoom-in' data-aos-delay='100' src={feature2} alt="" className='sm:max-w-[450px] max-w-[280px]  flex mx-auto w-full' />
+                        <div data-aos='zoom-in' className="lg:w-5/12 w-full">
+                            <img data-aos='zoom-in' data-aos-delay='100' src={img1} alt="" className='flex mx-auto w-full' />
                         </div>
 
-                        <div data-aos='fade-up' className="lg:w-5/12 w-full lg:mt-0 mt-8">
-                            <h2 className='md:text-4xl text-2xl font-semibold '>
-                                Expert Social Media Management from only
-                                <span className='font-bold text-blue-100'> $99 per month</span>
+                        <div data-aos='fade-up' className="lg:w-6/12 w-full">
+                            <h2 className='md:text-4xl text-2xl font-medium lg:[line-height:1.3]'>
+                                Expert Social Media <br></br> Management from only<br></br>
+                                <span className='font-extrabold text-blue-100'> $99 per month</span>
                             </h2>
 
-                            <div className="flex gap-6 items-center">
-                                <a href='/' className='btn-gradient text-white-100 rounded-lg px-3 md:text-base text-xs py-2 flex items-center gap-3'>
+                            <div className="flex gap-6 items-center py-8">
+                                <a href='/' className='btn-gradient text-white-100 rounded-lg px-3 md:text-base text-xs py-3 flex items-center gap-3'>
                                     Get Started
 
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
@@ -83,7 +83,7 @@ export default function Home() {
                                     </svg>
                                 </a>
 
-                                <a href='/' className='border border-blue-100 text-blue-100 rounded-lg px-3 md:text-base text-xs py-2'>
+                                <a href='/' className='border-2 border-blue-100 text-blue-100 rounded-lg px-3 md:text-base text-xs py-3 flex items-center gap-3'>
                                     Schedule Demo
 
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
@@ -92,7 +92,7 @@ export default function Home() {
                                 </a>
                             </div>
 
-                            <div className="py-8 space-y-3">
+                            <div className="space-y-3">
                                 <p>✔️ No contracts. Cancel anytime</p>
                                 <p>✔️ 14-day money-back guarantee</p>
                                 <p>✔️ Trusted by hundreds of businesses</p>
@@ -100,68 +100,9 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <img src={bg_cases} alt='' className='absolute left-0 right-0 w-full'></img>
-
-                    <div className='relative z-10 flex flex-wrap items-center justify-between mx-auto md:mt-20 mt-12 lg:space-y-0 space-y-12'>
-
-                        <div data-aos='fade-up' className="lg:w-5/12 w-full img-item">
-                            <img data-aos='zoom-in' data-aos-delay='100' src={feature3} alt="" className='sm:max-w-[450px] max-w-[280px] flex mx-auto w-full' />
-                        </div>
-
-                        <div data-aos='fade-up' className=" lg:w-6/12 w-full lg:mt-0 mt-8">
-                            <h2 className='md:text-4xl text-2xl font-bold '>
-                                Twitter AI Agent ( Engage to Earn )
-                            </h2>
-
-                            <p className="py-8">
-                                Redefine social engagement with ENgage-to-Earn rewards on X.com (Twitter). Contribute to X-Nova AI's growth by interacting and promoting and get reward for it.
-                            </p>
-
-                            <div className="flex gap-8 items-center">
-                                <a href='https://nova-ai-2.gitbook.io/xnovaai/x-nova-twitter-ai-agent-nova/engage-to-earn' className='border border-pink-100 rounded-lg px-3 md:text-base text-xs py-2 flex items-center gap-3 divide-x divide-pink-100 md:w-52 h-[53px]'>
-                                    <img src={build} alt="" className='pr-2 border-r border-pink-100' />
-                                    Twitter Ai Agent
-                                </a>
-
-                                <a href='/' className='border border-pink-100 rounded-lg px-3 md:text-base text-xs py-2 flex items-center gap-3 divide-x divide-pink-100 md:w-48 h-[53px]'>
-                                    <img src={read} alt="" className='pr-2 border-r border-pink-100' />
-                                    Read Benefits
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div className='relative z-10 flex flex-wrap flex-row-reverse items-center justify-between mx-auto md:mt-20 mt-12 lg:space-y-0 space-y-12'>
-                        <div data-aos='zoom-in' className="lg:w-5/12 w-full img-item">
-                            <img data-aos='zoom-in' data-aos-delay='100' src={feature4} alt="" className='sm:max-w-[450px] max-w-[280px]  flex mx-auto w-full' />
-                        </div>
-
-                        <div data-aos='fade-up' className=" lg:w-5/12 w-full lg:mt-0 mt-8">
-                            <h2 className='md:text-4xl text-2xl font-bold '>
-                                AI Agents Evolve & Breed
-                            </h2>
-
-                            <p className="py-8">
-                                Welcome th the next frontier of AI evolution! Experience autonomous AI agents that evolove, adapt and even breed within a decentralized ecosystem. Witness innovation like never before.
-                            </p>
-
-                            <div className="flex gap-8 items-center">
-                                <a href='https://nova-ai-2.gitbook.io/xnovaai/x-nova-autonomous-ai-developments/ai-agents-evolve-and-breed' className='border border-pink-100 rounded-lg px-3 md:text-base text-xs py-2 flex items-center gap-3 divide-x divide-pink-100 md:w-52 h-[53px]'>
-                                    <img src={build} alt="" className='pr-2 border-r border-pink-100' />
-                                    Take Me There
-                                </a>
-
-                                <a href='/' className='border border-pink-100 rounded-lg px-3 md:text-base text-xs py-2 flex items-center gap-3 divide-x divide-pink-100 md:w-48 h-[53px]'>
-                                    <img src={read} alt="" className='pr-2 border-r border-pink-100' />
-                                    Read Benefits
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                      <ImageSlider />
                 </div>
             </section>
-
 
             {/* X-Nova AI: Unleashing */}
 

@@ -41,7 +41,7 @@ export default function Menu() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"
           }`}
       >
-        <div className="lg:flex hidden items-center justify-between font-poppins w-9/12 border border-white-50 backdrop-blur rounded-full py-2 px-6 mt-6 mx-auto shadow-inner">
+        <div className="lg:flex hidden items-center justify-between font-poppins w-9/12 border border-black-25 backdrop-blur rounded-full py-2 px-6 mt-6 mx-auto shadow">
           <a href="/" className="">
             <img src={logo} alt="Logo" className="w-36" />
           </a>
