@@ -5,13 +5,10 @@ import feature2 from '../assets/feature2.png';
 import feature3 from '../assets/feature3.png';
 import feature4 from '../assets/feature4.png';
 import build from '../assets/build.png';
-import read from '../assets/read.png';
+import socials from '../assets/socials.png';
 import logo from '../assets/logo1.png';
 import bg_tokenomics from '../assets/bg_tokenomics.png';
 import token from '../assets/token.png';
-import x from '../assets/x.png';
-import telegram from '../assets/telegram.png';
-import discord from '../assets/discord.png';
 import bg_cases from '../assets/bg_cases.svg';
 import bg_token from '../assets/bg-token.png';
 
@@ -20,6 +17,7 @@ import 'aos/dist/aos.css';
 // import Roadmap from './Roadmap';
 import Faq from './Faq';
 import ImageSlider from './ImageSlider';
+import Footer from './Footer';
 
 
 export default function Home() {
@@ -56,20 +54,18 @@ export default function Home() {
     return (
         <div className="font-poppins overflow-hidden text-black-50">
 
-            <Menu />
-
-            {/* features section */}
-
             <section className="lg:px-20 px-5 lg:py-12 py-6">
                 <div className='container mx-auto'>
 
-                    <div className='flex flex-wrap flex-row-reverse items-center justify-between mx-auto md:mt-20 mt-12 lg:space-y-0 space-y-12'>
+                    <Menu />
+
+                    <div className='flex flex-wrap flex-row-reverse items-center justify-between mx-auto lg:space-y-0 space-y-12 lg:h-screen'>
                         <div data-aos='zoom-in' className="lg:w-5/12 w-full">
                             <img data-aos='zoom-in' data-aos-delay='100' src={img1} alt="" className='flex mx-auto w-full' />
                         </div>
 
                         <div data-aos='fade-up' className="lg:w-6/12 w-full">
-                            <h2 className='md:text-4xl text-2xl font-medium lg:[line-height:1.3]'>
+                            <h2 className='md:text-5xl text-2xl font-medium lg:[line-height:1.4]'>
                                 Expert Social Media <br></br> Management from only<br></br>
                                 <span className='font-extrabold text-blue-100'> $99 per month</span>
                             </h2>
@@ -97,10 +93,19 @@ export default function Home() {
                                 <p>✔️ 14-day money-back guarantee</p>
                                 <p>✔️ Trusted by hundreds of businesses</p>
                             </div>
+
+                            <div>
+                                <img src={socials} className='w-1/2 pt-6'></img>
+                            </div>
                         </div>
                     </div>
 
-                      <ImageSlider />
+                    <ImageSlider />
+
+
+                    <h2 className='text-center font-medium md:text-5xl lg:py-16 py-8'>
+                        Save <span className='text-blue-100'>time.</span> Save <span className='text-blue-100'>money</span>. Save <span className='text-blue-100'>hassle.</span>
+                    </h2>
                 </div>
             </section>
 
@@ -110,7 +115,11 @@ export default function Home() {
 
             <div className="lg:py-20 py-6 lg:px-20 px-5 container mx-auto relative z-10">
 
-                <div className='flex flex-wrap justify-center lg:space-y-0 space-y-8'>
+                <h3 className='text-center font-bold md:text-5xl lg:py-16 py-8'>
+                    Why <span className='text-blue-100'>Oxbey?</span>
+                </h3>
+
+                <div className='grid md:grid-cols-3 grid-cols-1 lg:grid-rows-2 grid-rows-1 justify-center lg:space-y-0 space-y-8'>
                     <div className='md:w-4/12 rounded-[32px] bg-vision md:p-10 p-6 lg:-mr-10 text-center space-y-8 lg:translate-y-16'>
                         <p className='md:text-3xl text-xl font-semibold '>
                             Vision
@@ -239,69 +248,22 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* roadmap section */}
-
-            {/* <img src={bg_token} alt='' className='absolute left-0 right-0 w-full -mt-20'></img>
-
-            <div id='roadmap' className="lg:px-20 px-5 lg:py-20 py-6 relative z-10">
-                <div className='container mx-auto'>
-                    <p data-aos='fade-up' className='md:text-5xl text-3xl  text-center'>Roadmap</p>
-
-                    <div data-aos='zoom-in'>
-                        <Roadmap />
-                    </div>
-                </div>
-            </div> */}
-
             {/* faq section */}
 
-            <div id='faq' className="lg:px-20 px-5 py-8 relative z-10 bg-img">
+            <div id='faq' className="lg:px-20 px-5 py-20">
                 <div className='container mx-auto'>
 
                     <div data-aos='fade-up' className='text-center space-y-4'>
-                        <p className='md:text-5xl text-3xl  text-center'>Have any Question? </p>
-                        <p>Join the industry leaders to discuss where the markets are heading. We accept token payments.</p>
+                        <p className='md:text-5xl text-3xl text-center font-semibold'>Frequently Asked <span className='text-blue-100'>Questions</span></p>
                     </div>
 
                     <div className='md:mt-16 mt-6'>
                         <Faq items={faqItems} />
                     </div>
-
-
-                    <div className='md:pt-32 pt-12 space-y-8'>
-                        <nav>
-                            <ul className="flex flex-wrap justify-center gap-5 text-sm pt-4 items-center ">
-                                <li><a href="/" className="">Home</a></li>
-                                <li><a href="#about" className="">About us</a></li>
-                                <li><a href="#features" className="">Features</a></li>
-                                <li><a href="/" className="">Dapp</a></li>
-                                <li><a href="/" className=''>AI Agent</a></li>
-                                <li><a href="/" className=''>Autonomous Ai</a></li>
-                                <li><a href="#tokenomics" className=''>Tokenomics</a></li>
-                                <li><a href="#roadmap" className=''>Roadmap</a></li>
-                            </ul>
-                        </nav>
-
-                        <div className="flex justify-center gap-3 items-center">
-                            <a href='https://x.com/XNova_AI' className='p-3 rounded-xl bg-[#353535]'>
-                                <img src={x} alt='X' className='w-4'></img>
-                            </a>
-                            <a href='https://t.me/xnova_ai' className='p-3 rounded-xl bg-[#353535]'>
-                                <img src={telegram} alt='X' className='w-[18px]'></img>
-                            </a>
-                            <a href='/' className='p-3 rounded-xl bg-[#353535]'>
-                                <img src={discord} alt='X' className='w-[18px]'></img>
-                            </a>
-                        </div>
-
-                        <p className='text-center'>Copyright © {new Date().getFullYear()} X-Nova Ai. All rights reserved.</p>
-                    </div>
-
-
                 </div>
             </div>
 
-
+            <Footer />
 
         </div>
     )

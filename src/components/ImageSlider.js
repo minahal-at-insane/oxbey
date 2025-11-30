@@ -14,7 +14,6 @@ const visibleCount = 4; // Number of slides visible at a time
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const intervalRef = useRef(null);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -24,27 +23,12 @@ const ImageSlider = () => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  useEffect(() => {
-    startAutoSlide();
-    return () => stopAutoSlide();
-  }, []);
-
-  const startAutoSlide = () => {
-    intervalRef.current = setInterval(nextSlide, 3000); // change slide every 3s
-  };
-
-  const stopAutoSlide = () => {
-    clearInterval(intervalRef.current);
-  };
-
   // Infinite scrolling: duplicate first slides at the end for smooth transition
   const extendedImages = [...images, ...images.slice(0, visibleCount)];
 
   return (
     <div
       className="relative w-full mx-auto"
-      onMouseEnter={stopAutoSlide}
-      onMouseLeave={startAutoSlide}
     >
       {/* Slider container */}
       <div className="overflow-hidden rounded-lg">
@@ -69,13 +53,13 @@ const ImageSlider = () => {
       {/* Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-2 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 z-10"
+        className="absolute top-1/2 -left-1 backdrop-blur-sm -translate-y-1/2 bg-white-100 p-2 w-9 h-9 flex mx-auto items-center justify-center rounded-full shadow-lg z-10"
       >
         &#8592;
       </button>
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-2 -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 z-10"
+        className="absolute top-1/2 -right-1 backdrop-blur-sm -translate-y-1/2 bg-white-100 p-2 w-9 h-9 flex mx-auto items-center justify-center rounded-full shadow-lg z-10"
       >
         &#8594;
       </button>
