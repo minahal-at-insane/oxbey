@@ -42,14 +42,8 @@ html {
 }
 
 .btn-gradient {
-  background-image: none;
-  border-radius: 50px;
-}
-
-.btn-gradient:hover {
-  background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FD5 100%);
+  background: linear-gradient(180deg, #3273ff 0, #35bbff 100%);
   background-size: 300% auto;
-  transition: .5s;
   background-position: 100% 0;
 }
 

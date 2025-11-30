@@ -18,7 +18,7 @@ import bg_token from '../assets/bg-token.png';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Roadmap from './Roadmap';
+// import Roadmap from './Roadmap';
 import Faq from './Faq';
 
 
@@ -54,362 +54,48 @@ export default function Home() {
     ];
 
     return (
-        <div className="bg-black-100 font-inter overflow-hidden text-white-100">
+        <div className="font-poppins overflow-hidden">
 
-            <section className="lg:px-20 px-5">
-                <div className='container mx-auto'>
-
-                    <Menu />
-                    <div className="flex flex-col justify-center items-center gap-y-6 lg:py-28 py-12 text-center lg:w-9/12 mx-auto">
-                        <h1 data-aos='fade-down' className='lg:text-[11rem] md:text-7xl text-5xl font-bricolage font-bold text-gradient tracking-wider'>
-                            X-Nova AI
-                        </h1>
-
-                        <p data-aos='fade-up' className='font-bricolage md:text-4xl text-xl md:leading-snug'>
-                            The First Platform Pioneering Autonomous AI Advancements
-                            and AI Agents  On The Ethereum Blockchain
-                        </p>
-                        <p>
-                            At the forefront of innovation, we seamlessly merge cutting-edge AI technology with blockchain infrastructure, delivering transformative solutions and unparalleled rewards for our community.
-                        </p>
-                        <p>
-                            CA:
-                        </p>
-
-                        <div className="flex items-center justify-center md:gap-8 gap-6 mx-auto font-bricolage">
-                            <a href="/">
-                                <button className="text-white-100 rounded-xl py-3 md:text-lg px-6 border-custom btn-gradient">
-                                    Get Started
-                                </button>
-                            </a>
-
-                            <a href="https://nova-ai-2.gitbook.io/nova-ai-docs/~/changes/EQ4qSBxbIHuomQbVvnfo?r=0J9QPlO36tuh8sLa0Kpg" target='_blank' rel='noopener noreferrer'>
-                                <button className="text-white-100 rounded-xl py-3 md:text-lg px-6 border-custom btn-gradient">
-                                    Whitepaper
-                                </button>
-                            </a>
-                        </div>
-
-                        <div className='lg:h-[85vh]'>
-                            <img data-aos='fade-in' data-aos-delay='100' src={bottom} alt='x-nova-ai' className='lg:absolute right-0 left-0 w-full mt-6'></img>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* who we are section */}
-
-            <section id='about' className="lg:px-20 px-5 lg:py-20 py-6 relative z-10 font-bricolage">
-                <div className='container mx-auto'>
-
-                    <div className='flex flex-col gap-y-5 items-center mx-auto justify-center w-11/12 bg-black-50 md:p-16 p-6 border-2 rounded-xl text-center'>
-                        <p className='font-[500]'>WHO WE ARE</p>
-
-                        <p data-aos='fade-up' className='md:text-xl'>
-                            X-Nova AI is revolutionizing the way AI and blockchain work together. As the first of its kind, our platform empowers individuals and organizations with next-gen AI Agents that simplify and automate even the most complex tasks.
-                            <br></br><br></br>
-                            By combining cutting-edge AI solutions with the transparency and security of blockchain technology, X-Nova AI is paving the way for a smarter, more efficent and connected world.
-                        </p>
-
-                        <div className='flex flex-wrap items-start mx-auto text-left'>
-
-
-                            <div className='md:w-1/2 flex items-start gap-3 md:text-xl md:mt-12 mt-6'>
-                                <div>
-                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="11" cy="11" r="11" fill="url(#paint0_linear_5_355)" />
-                                        <defs>
-                                            <linearGradient id="paint0_linear_5_355" x1="11" y1="0" x2="22" y2="28.5" gradientUnits="userSpaceOnUse">
-                                                <stop stopColor="#7B2EB0" />
-                                                <stop offset="1" stopColor="#481CBB" />
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Empower Yourself with AI Agents</p>
-                            </div>
-
-                            <div className='md:w-1/2 flex gap-3 md:text-xl md:mt-12 mt-6'>
-                                <div>
-                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="11" cy="11" r="11" fill="url(#paint0_linear_5_355)" />
-                                        <defs>
-                                            <linearGradient id="paint0_linear_5_355" x1="11" y1="0" x2="22" y2="28.5" gradientUnits="userSpaceOnUse">
-                                                <stop stopColor="#7B2EB0" />
-                                                <stop offset="1" stopColor="#481CBB" />
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </div>
-
-                                <p data-aos='fade-in' data-aos-delay='100'> Pioneering Autonomous AI Evolution on the Ethereum Blockchain</p>
-                            </div>
-
-                            <div className='md:w-1/2 flex md:text-xl gap-3 md:mt-16 mt-6'>
-                                <div>
-                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="11" cy="11" r="11" fill="url(#paint0_linear_5_355)" />
-                                        <defs>
-                                            <linearGradient id="paint0_linear_5_355" x1="11" y1="0" x2="22" y2="28.5" gradientUnits="userSpaceOnUse">
-                                                <stop stopColor="#7B2EB0" />
-                                                <stop offset="1" stopColor="#481CBB" />
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Earn Rewards for Engagement</p>
-                            </div>
-
-                            <div className='md:w-1/2 flex md:text-xl gap-3 md:mt-16 mt-6'>
-                                <div>
-                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="11" cy="11" r="11" fill="url(#paint0_linear_5_355)" />
-                                        <defs>
-                                            <linearGradient id="paint0_linear_5_355" x1="11" y1="0" x2="22" y2="28.5" gradientUnits="userSpaceOnUse">
-                                                <stop stopColor="#7B2EB0" />
-                                                <stop offset="1" stopColor="#481CBB" />
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Redefining Intelligence</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Why choose Us? section */}
-
-            <img src={bg_cases} alt='' className='absolute left-0 right-0 w-full'></img>
-
-            <section id='choose' className="lg:px-20 px-5 lg:py-20 py-6 relative z-10 font-bricolage">
-                <div className='container mx-auto'>
-
-                    <div className='text-center space-y-6'>
-                        <p className='md:text-xl'>Why choose Us?</p>
-
-                        <p data-aos='fade-up' className='md:text-6xl text-3xl font-bold tracking-wide'>
-                            X-Nova Ai Use Cases
-                        </p>
-                    </div>
-
-                    <div className='flex flex-wrap items-start justify-between mx-auto md:mt-20 mt-8'>
-
-                        <div className='md:w-5/12'>
-                            <p data-aos='fade-right' className='md:text-2xl text-lg'>X-Nova Ai Engage-to-Earn dApp</p>
-
-                            <p data-aos='fade-right' className='md:my-8 my-6'>
-                                The X-Nova AI Engage-to-Earn dApp is designed to reward user engagement while promoting project visibility
-                            </p>
-
-                            <div className='flex items-center gap-3'>
-                                <div data-aos='zoom-in'>
-                                    <svg width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Community Growth & Promotion</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div data-aos='zoom-in'>
-                                    <svg width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Increasing Awareness in the Crypto Community</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div data-aos='zoom-in'>
-                                    <svg width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Driving User Adoption</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div>
-                                    <svg data-aos='zoom-in' width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Building an Influencer Ecosystem</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div>
-                                    <svg data-aos='zoom-in' width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Driving Token Utility</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div>
-                                    <svg data-aos='zoom-in' width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Data Insights for the Project</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div>
-                                    <svg data-aos='zoom-in' width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Supporting Grassroots Marketing</p>
-                            </div>
-                        </div>
-
-                        <div className='md:w-5/12'>
-                            <p data-aos='fade-left' className='md:text-2xl text-lg'>
-                                X-Nova Ai Custom Ai Agent Bot
-                                & dApp
-                            </p>
-
-                            <p data-aos='fade-left' className='md:my-8 my-6'>
-                                AI Agent Telegram Bots can serve various roles, making them highly versatile for individuals, communities, and businesses
-                            </p>
-
-                            <div className='flex items-center gap-3'>
-                                <div data-aos='zoom-in'>
-                                    <svg width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Community Management</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div data-aos='zoom-in'>
-                                    <svg width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Customer Support & Service</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div data-aos='zoom-in'>
-                                    <svg width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Learning & Education</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div data-aos='zoom-in'>
-                                    <svg width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Marketing & Promotions</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div data-aos='zoom-in'>
-                                    <svg width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Financial Assistance</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div data-aos='zoom-in'>
-                                    <svg width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Productivity Tools</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div data-aos='zoom-in'>
-                                    <svg width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Entertainment & Fun</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div data-aos='zoom-in'>
-                                    <svg width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>News & Updates</p>
-                            </div>
-                            <div className='flex items-center gap-3 mt-4'>
-                                <div data-aos='zoom-in'>
-                                    <svg width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12.5" cy="12.5" r="11.5854" stroke="#FCFCFC" strokeWidth="1.82927" />
-                                    </svg>
-                                </div>
-                                <p data-aos='fade-in' data-aos-delay='100'>Social Engagement</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Menu />
 
             {/* features section */}
 
-            <img src={bg_cases} alt='' className='absolute left-0 right-0 w-full'></img>
-
-            <section id='features' className="lg:px-20 px-5 lg:pb-20 py-6 relative z-10">
+            <section id='features' className="lg:px-20 px-5 lg:py-20 py-6">
                 <div className='container mx-auto'>
 
-                    <div className='flex flex-wrap items-center justify-between mx-auto md:mt-20 mt-8 lg:space-y-0 space-y-12'>
-
-                        <div data-aos='zoom-in' className="lg:w-6/12 w-full img-item">
-                            <img data-aos='zoom-in' data-aos-delay='100' src={feature1} alt="" className='sm:max-w-[450px] max-w-[280px]  flex mx-auto w-full' />
-                        </div>
-
-                        <div data-aos='fade-up' className="text-white-100 lg:w-5/12 w-full lg:mt-0 mt-8">
-                            <h2 className='md:text-4xl text-2xl font-bold font-bricolage'>
-                                Custom AI Agent Bot 🤖
-                            </h2>
-
-                            <p className="py-8  ">
-                                Build and deploy smart Ai agents directly within telegram to automate tasks, boost efficency and elevate productivity like never before.
-                            </p>
-
-                            <div className="flex gap-8 items-center">
-                                <a href='https://nova-ai-2.gitbook.io/xnovaai/x-nova-ai-agent-bot-and-dapp/x-nova-ai-custom-ai-agent-bot' className='border border-pink-100 rounded-lg px-3 md:text-base text-xs cursor-pointer py-2 flex items-center gap-3 divide-x divide-pink-100 md:w-48 h-[53px]'>
-                                    <img src={build} alt="" className='pr-2 border-r border-pink-100' />
-                                    Lets Build
-                                </a>
-
-                                <a href='/' className='border border-pink-100 rounded-lg px-3 md:text-base text-xs cursor-pointer py-2 flex items-center gap-3 divide-x divide-pink-100 md:w-48 h-[53px]'>
-                                    <img src={read} alt="" className='pr-2 border-r border-pink-100' />
-                                    Read Benefits
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div className='relative z-10 flex flex-wrap flex-row-reverse items-center justify-between mx-auto md:mt-20 mt-12 lg:space-y-0 space-y-12'>
+                    <div className='flex flex-wrap flex-row-reverse items-center justify-between mx-auto md:mt-20 mt-12 lg:space-y-0 space-y-12'>
                         <div data-aos='zoom-in' className="lg:w-5/12 w-full img-item">
                             <img data-aos='zoom-in' data-aos-delay='100' src={feature2} alt="" className='sm:max-w-[450px] max-w-[280px]  flex mx-auto w-full' />
                         </div>
 
-                        <div data-aos='fade-up' className="text-white-100 lg:w-5/12 w-full lg:mt-0 mt-8">
-                            <h2 className='md:text-4xl text-2xl font-bold font-bricolage'>
-                                Custom AI Agent dApp  🖥
+                        <div data-aos='fade-up' className="lg:w-5/12 w-full lg:mt-0 mt-8">
+                            <h2 className='md:text-4xl text-2xl font-semibold '>
+                                Expert Social Media Management from only
+                                <span className='font-bold text-blue-100'> $99 per month</span>
                             </h2>
 
-                            <p className="py-8">
-                                create and personalize your very own AI solutions through our decentralized application. Accessible, user-friendly and tailored for everyone from beginners to blockchain pros.
-                            </p>
+                            <div className="flex gap-6 items-center">
+                                <a href='/' className='btn-gradient text-white-100 rounded-lg px-3 md:text-base text-xs py-2 flex items-center gap-3'>
+                                    Get Started
 
-                            <div className="flex gap-8 items-center">
-                                <a href='https://nova-ai-2.gitbook.io/xnovaai/x-nova-ai-agent-bot-and-dapp/x-nova-ai-agent-dapp' className='border border-pink-100 rounded-lg px-3 md:text-base text-xs py-2 flex items-center gap-3 divide-x divide-pink-100 md:w-52 h-[53px]'>
-                                    <img src={build} alt="" className='pr-2 border-r border-pink-100' />
-                                    Take Me There
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                    </svg>
                                 </a>
 
-                                <a href='/' className='border border-pink-100 rounded-lg px-3 md:text-base text-xs py-2 flex items-center gap-3 divide-x divide-pink-100 md:w-48 h-[53px]'>
-                                    <img src={read} alt="" className='pr-2 border-r border-pink-100' />
-                                    Read Benefits
+                                <a href='/' className='border border-blue-100 text-blue-100 rounded-lg px-3 md:text-base text-xs py-2'>
+                                    Schedule Demo
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                    </svg>
                                 </a>
+                            </div>
+
+                            <div className="py-8 space-y-3">
+                                <p>✔️ No contracts. Cancel anytime</p>
+                                <p>✔️ 14-day money-back guarantee</p>
+                                <p>✔️ Trusted by hundreds of businesses</p>
                             </div>
                         </div>
                     </div>
@@ -422,8 +108,8 @@ export default function Home() {
                             <img data-aos='zoom-in' data-aos-delay='100' src={feature3} alt="" className='sm:max-w-[450px] max-w-[280px] flex mx-auto w-full' />
                         </div>
 
-                        <div data-aos='fade-up' className="text-white-100 lg:w-6/12 w-full lg:mt-0 mt-8">
-                            <h2 className='md:text-4xl text-2xl font-bold font-bricolage'>
+                        <div data-aos='fade-up' className=" lg:w-6/12 w-full lg:mt-0 mt-8">
+                            <h2 className='md:text-4xl text-2xl font-bold '>
                                 Twitter AI Agent ( Engage to Earn )
                             </h2>
 
@@ -451,8 +137,8 @@ export default function Home() {
                             <img data-aos='zoom-in' data-aos-delay='100' src={feature4} alt="" className='sm:max-w-[450px] max-w-[280px]  flex mx-auto w-full' />
                         </div>
 
-                        <div data-aos='fade-up' className="text-white-100 lg:w-5/12 w-full lg:mt-0 mt-8">
-                            <h2 className='md:text-4xl text-2xl font-bold font-bricolage'>
+                        <div data-aos='fade-up' className=" lg:w-5/12 w-full lg:mt-0 mt-8">
+                            <h2 className='md:text-4xl text-2xl font-bold '>
                                 AI Agents Evolve & Breed
                             </h2>
 
@@ -485,7 +171,7 @@ export default function Home() {
 
                 <div className='flex flex-wrap justify-center lg:space-y-0 space-y-8'>
                     <div className='md:w-4/12 rounded-[32px] bg-vision md:p-10 p-6 lg:-mr-10 text-center space-y-8 lg:translate-y-16'>
-                        <p className='md:text-3xl text-xl font-semibold font-bricolage'>
+                        <p className='md:text-3xl text-xl font-semibold '>
                             Vision
                         </p>
 
@@ -501,7 +187,7 @@ export default function Home() {
                     </div>
 
                     <div data-aos='fade-up' className='md:w-4/12 rounded-[32px] bg-mission bg-opacity-30 md:p-10 p-6 text-center space-y-8'>
-                        <p className='md:text-3xl text-xl font-semibold font-bricolage'>
+                        <p className='md:text-3xl text-xl font-semibold '>
                             Mission
                         </p>
 
@@ -519,7 +205,7 @@ export default function Home() {
                     <div className='mx-6 md:w-3/12 space-y-5'>
                         <img src={logo} alt='' className='w-56 flex mx-auto'></img>
 
-                        <p className='md:text-4xl text-2xl font-semibold font-bricolage text-center'>
+                        <p className='md:text-4xl text-2xl font-semibold  text-center'>
                             X-Nova AI: Unleashing
                         </p>
                     </div>
@@ -534,7 +220,7 @@ export default function Home() {
             <div id='tokenomics' className="lg:px-20 px-5 lg:py-20 py-6 relative z-10">
                 <div className='container mx-auto'>
 
-                    <p data-aos='fade-up' className='md:text-5xl text-3xl font-bricolage text-center'>TOKENOMICS</p>
+                    <p data-aos='fade-up' className='md:text-5xl text-3xl  text-center'>TOKENOMICS</p>
 
                     <button data-aos='fade-in' data-aos-delay='100' className='border-2 rounded-full px-6 py-3 mx-auto block mt-8'>
                         Click to copy Contract Address
@@ -614,17 +300,17 @@ export default function Home() {
 
             {/* roadmap section */}
 
-            <img src={bg_token} alt='' className='absolute left-0 right-0 w-full -mt-20'></img>
+            {/* <img src={bg_token} alt='' className='absolute left-0 right-0 w-full -mt-20'></img>
 
             <div id='roadmap' className="lg:px-20 px-5 lg:py-20 py-6 relative z-10">
                 <div className='container mx-auto'>
-                    <p data-aos='fade-up' className='md:text-5xl text-3xl font-bricolage text-center'>Roadmap</p>
+                    <p data-aos='fade-up' className='md:text-5xl text-3xl  text-center'>Roadmap</p>
 
                     <div data-aos='zoom-in'>
                         <Roadmap />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* faq section */}
 
@@ -632,7 +318,7 @@ export default function Home() {
                 <div className='container mx-auto'>
 
                     <div data-aos='fade-up' className='text-center space-y-4'>
-                        <p className='md:text-5xl text-3xl font-bricolage text-center'>Have any Question? </p>
+                        <p className='md:text-5xl text-3xl  text-center'>Have any Question? </p>
                         <p>Join the industry leaders to discuss where the markets are heading. We accept token payments.</p>
                     </div>
 
@@ -643,7 +329,7 @@ export default function Home() {
 
                     <div className='md:pt-32 pt-12 space-y-8'>
                         <nav>
-                            <ul className="flex flex-wrap justify-center gap-5 text-sm pt-4 items-center text-white-100">
+                            <ul className="flex flex-wrap justify-center gap-5 text-sm pt-4 items-center ">
                                 <li><a href="/" className="">Home</a></li>
                                 <li><a href="#about" className="">About us</a></li>
                                 <li><a href="#features" className="">Features</a></li>

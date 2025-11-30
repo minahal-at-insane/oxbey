@@ -11,9 +11,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/pricing" element={<Pricing />} />
       <Route path="/services" element={<Services />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/pricing" element={<Pricing />} />
     </Routes>
   );
 }

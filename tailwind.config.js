@@ -16,8 +16,7 @@ module.exports = {
         "200": "#6D98FF",
       },
       blue: {
-        "50": "#20BFF7",
-        "100": "#4776E6",
+        "100": "#0a79f7",
       },
       red: {
         "50": "#FF4880",
@@ -31,8 +30,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      'inter': ["'Inter', sans-serif"],
-      'bricolage': ["'Bricolage Grotesque', serif"],
+      'poppins': ["'Poppins', sans-serif"],
     }
   },
   plugins: [],

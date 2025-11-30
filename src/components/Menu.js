@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from '../assets/logo.png';
 import { Link } from "react-router-dom";
 
@@ -11,64 +11,79 @@ export default function Menu() {
     isOpen === true ? setIsopen(false) : setIsopen(true);
   }
 
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScroll, setLastScroll] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > lastScroll && currentScroll > 80) {
+        // scrolling down → hide
+        setShowHeader(false);
+      } else {
+        // scrolling up → show
+        setShowHeader(true);
+      }
+
+      setLastScroll(currentScroll);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScroll]);
 
   return (
 
     <header>
 
-      <div className="lg:flex hidden items-center justify-between font-inter h-28">
-        <a href="/" className="">
-          <img src={logo} alt="Logo" className='w-20' />
-        </a>
+      <div
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"
+          }`}
+      >
+        <div className="lg:flex hidden items-center justify-between font-poppins w-9/12 border border-white-50 backdrop-blur rounded-full py-2 px-6 mt-6 mx-auto shadow-inner">
+          <a href="/" className="">
+            <img src={logo} alt="Logo" className="w-36" />
+          </a>
 
-        <nav>
-          <ul className="flex justify-center gap-6 pt-4 items-center text-white-100">
-            <li><a href="/" className="">Home</a></li>
-            <li><a href="#about" className="">About us</a></li>
-            <li><a href="#features" className="">Features</a></li>
-            <li><a href="/" className="">Dapp</a>
-            </li>
-            <li><a href="/" className=''>AI Agent</a></li>
-            <li><a href="/" className=''>Autonomous Ai</a></li>
-            <li><a href="#tokenomics" className=''>Tokenomics</a></li>
-            <li><a href="#roadmap" className=''>Roadmap</a></li>
-             <Link to="/contact">Contact</Link>
-          </ul>
-        </nav>
+          <nav>
+            <ul className="flex justify-center gap-6 items-center">
+              <li><Link to="/" className='hover:text-blue-100 duration-150'>Home</Link></li>
+              <li><Link to="/pricing" className='hover:text-blue-100 duration-150'>Pricing</Link></li>
+              <li><Link to="/services" className='hover:text-blue-100 duration-150'>Services</Link></li>
+              <li><Link to="/contact" className='hover:text-blue-100 duration-150'>Contact</Link></li>
+            </ul>
+          </nav>
 
-        <div>
-          <button onClick={() => setShow(!show)} className="border-custom btn-gradient animate-border rounded-lg py-3 lg:px-6 px-4 font-semibold text-white-100">
-            Ai Supervision
-          </button>
+          <div>
+            <button className="bg-blue-100 text-white-100 rounded-full py-2 lg:px-6 px-4 font-semibold hover:bg-white-100 hover:text-blue-100 duration-150 shadow-md">
+              Schedule Meeting
+            </button>
+          </div>
         </div>
       </div>
 
-      <div className="lg:hidden flex items-center justify-between py-6">
+      <div className="lg:hidden flex items-center justify-between p-6">
         <a href="/" className="">
-          <img src={logo} alt="Logo" className='w-14' />
+          <img src={logo} alt="Logo" className='w-32' />
         </a>
 
         <button onClick={ToggleSidebar} className="nav cursor-pointer">
 
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-white-100">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
           </svg>
 
         </button>
       </div>
 
-      <div className={`sidebar ${isOpen === true ? 'active' : ''} dark:bg-blue-200 bg-black-100 border border-white-50 rounded-md`}>
+      <div className={`sidebar ${isOpen === true ? 'active' : ''} bg-blue-100 border text-white-100 rounded-md`}>
         <div className='p-6'>
-          <ul onClick={ToggleSidebar} className='space-y-5'>
-            <li><a href="/" className="">Home</a></li>
-            <li><a href="#about" className="">About us</a></li>
-            <li><a href="#features" className="">Features</a></li>
-            <li><a href="/" className="">Dapp</a></li>
-            <li><a href="/" className=''>AI Agent</a></li>
-            <li><a href="/" className=''>Autonomous Ai</a></li>
-            <li><a href="#tokenomics" className=''>Tokenomics</a></li>
-            <li><a href="#roadmap" className=''>Roadmap</a></li>
-            <li><a href="/" className=''>Ai Supervision</a></li>
+          <ul onClick={ToggleSidebar} className='space-y-8'>
+            <li><Link to="/" className='hover:text-blue-100 duration-150'>Home</Link></li>
+            <li><Link to="/pricing" className='hover:text-blue-100 duration-150'>Pricing</Link></li>
+            <li><Link to="/services" className='hover:text-blue-100 duration-150'>Services</Link></li>
+            <li><Link to="/contact" className='hover:text-blue-100 duration-150'>Contact</Link></li>
           </ul>
         </div>
       </div>
