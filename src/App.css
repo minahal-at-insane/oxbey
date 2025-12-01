@@ -47,49 +47,12 @@ html {
   background-position: 100% 0;
 }
 
-.img-item {
-  position: relative;
-  z-index: 1;
+.slick-slide {
+  padding: 10px;
 }
-
-.img-item::after,
-.img-item::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  max-width: 450px;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  margin: 0 auto;
+.slick-list {
+  padding: -10px;
 }
-
-.img-item::after {
-  background: linear-gradient(191.32deg, #7B2EB0 -118.59%, #C584F5 15.64%, #DACEE1 56.18%, #0D2986 97.62%, #481CBB 131.68%, #142D8E 131.68%);
-  border-radius: 30.28px;
-  opacity: 30%;
-  transform: matrix(0.97, -0.1, 0.25, 0.99, 0, 0);
-}
-
-.img-item::before {
-  background: linear-gradient(191.32deg, #7B2EB0 -118.59%, #C584F5 15.64%, #DACEE1 56.18%, #0D2986 97.62%, #481CBB 131.68%, #142D8E 131.68%);
-  border-radius: 30.28px;
-  opacity: 30%;
-  transform: matrix(0.89, -0.26, 0.53, 0.95, 0, 0);
-}
-
-.bg-vision {
-  background: linear-gradient(180deg, #C689F9 0%, rgba(217, 217, 217, 0) 172.98%, #F5F5F5 172.98%);
-
-}
-
-.bg-mission {
-  background: linear-gradient(180deg, #EF09DA -3.94%, #C584F5 111.16%);
-}
-
 
 /* ---Sidebar css */
 

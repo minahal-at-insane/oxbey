@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Menu() {
 
   const [isOpen, setIsopen] = useState(false);
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
   const ToggleSidebar = () => {
     isOpen === true ? setIsopen(false) : setIsopen(true);
