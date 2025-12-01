@@ -5,6 +5,16 @@ import a from '../assets/a.png';
 import b from '../assets/b.png';
 import c from '../assets/c.png';
 import d from '../assets/d.png';
+import benefit1 from '../assets/benefit1.webp';
+import benefit2 from '../assets/benefit2.webp';
+import benefit3 from '../assets/benefit3.webp';
+import benefit4 from '../assets/benefit4.webp';
+import benefit5 from '../assets/benefit5.webp';
+import benefit6 from '../assets/benefit6.webp';
+import benefit7 from '../assets/benefit7.webp';
+import benefit8 from '../assets/benefit8.webp';
+import benefit9 from '../assets/benefit9.webp';
+
 import socials from '../assets/socials.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -103,7 +113,7 @@ export default function Home() {
 
             {/* why oxbey */}
 
-            <div className="lg:py-20 py-6 lg:px-20 px-5 container mx-auto relative z-10">
+            <div className="lg:py-20 py-6 lg:px-20 px-5 container mx-auto">
 
                 <h3 className='text-center font-bold md:text-5xl lg:py-16 py-8'>
                     Why <span className='text-blue-100'>Oxbey?</span>
@@ -115,11 +125,101 @@ export default function Home() {
 
             </div>
 
+            {/* benefit section */}
+
+
+            <section className="lg:px-20 px-5 lg:py-20 py-8 btn-gradient text-white-100">
+                <div className='container mx-auto md:space-y-10 space-y-6'>
+                    <h3 className='text-center font-bold md:text-6xl text-3xl'>
+                        Subscription benefits
+                    </h3>
+
+                    <p className='text-center'>Simple, flexible, and affordable video creation designed to grow your brand.</p>
+
+                    <div className='grid md:grid-cols-3 grid-cols-1 lg:grid-rows-3 grid-rows-1 items-center justify-center md:gap-10 gap-8'>
+
+                        <div className='text-center space-y-3'>
+                            <img src={benefit1} alt='benefit' className='w-20 flex mx-auto'></img>
+                            <h4 className='md:text-2xl text-xl font-medium'>Premium quality</h4>
+                            <p className='font-light lg:px-8'>
+                                Professional, high-quality social media content that get results.
+                            </p>
+                        </div>
+
+                        <div className='text-center space-y-3'>
+                            <img src={benefit2} alt='benefit' className='w-20 flex mx-auto'></img>
+                            <h4 className='md:text-2xl text-xl font-medium'>Super-fast delivery</h4>
+                            <p className='font-light lg:px-8'>
+                                Receive your first batch of content within 5 business days.
+                            </p>
+                        </div>
+
+                        <div className='text-center space-y-3'>
+                            <img src={benefit3} alt='benefit' className='w-20 flex mx-auto'></img>
+                            <h4 className='md:text-2xl text-xl font-medium'>Fixed monthly rate</h4>
+                            <p className='font-light lg:px-8'>
+                                One flat fee with no surprises or hidden costs each month.
+                            </p>
+                        </div>
+
+                        <div className='text-center space-y-3'>
+                            <img src={benefit4} alt='benefit' className='w-20 flex mx-auto'></img>
+                            <h4 className='md:text-2xl text-xl font-medium'>Unlimited revisions</h4>
+                            <p className='font-light lg:px-8'>
+                                Request as many tweaks as you need until you are satisfied.
+                            </p>
+                        </div>
+
+                        <div className='text-center space-y-3'>
+                            <img src={benefit5} alt='benefit' className='w-20 flex mx-auto'></img>
+                            <h4 className='md:text-2xl text-xl font-medium'>Flexible & scalable</h4>
+                            <p className='font-light lg:px-8'>
+                                Easily upgrade, downgrade or cancel your plan anytime.
+                            </p>
+                        </div>
+
+                        <div className='text-center space-y-3'>
+                            <img src={benefit6} alt='benefit' className='w-20 flex mx-auto'></img>
+                            <h4 className='md:text-2xl text-xl font-medium'>Team collaboration</h4>
+                            <p className='font-light lg:px-8'>
+                                Invite unlimited team members to suggest ideas and give feedback.
+                            </p>
+                        </div>
+
+                        <div className='text-center space-y-3'>
+                            <img src={benefit7} alt='benefit' className='w-20 flex mx-auto'></img>
+                            <h4 className='md:text-2xl text-xl font-medium'>Consistent branding</h4>
+                            <p className='font-light lg:px-8'>
+                                Premium content that matches your brand style and tone.
+                            </p>
+                        </div>
+
+                        <div className='text-center space-y-3'>
+                            <img src={benefit8} alt='benefit' className='w-20 flex mx-auto'></img>
+                            <h4 className='md:text-2xl text-xl font-medium'>Unique and yours</h4>
+                            <p className='font-light lg:px-8'>
+                                Every piece of content is 100% owned by you for you to reuse however you like.
+                            </p>
+                        </div>
+
+                        <div className='text-center space-y-3'>
+                            <img src={benefit9} alt='benefit' className='w-20 flex mx-auto'></img>
+                            <h4 className='md:text-2xl text-xl font-medium'>Dedicated support</h4>
+                            <p className='font-light lg:px-8'>
+                                Get expert email or video call support whenever you need it.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
             {/* getting started */}
 
-            <div className="lg:py-20 py-6 lg:px-20 px-5 container mx-auto space-y-12">
+            <div className="lg:py-20 py-6 lg:px-20 px-5 container mx-auto space-y-24">
 
-                <h3 className='text-center font-bold md:text-5xl lg:py-16 py-8'>
+                <h3 className='text-center font-bold md:text-5xl'>
                     Getting Started Is <span className='text-blue-100'>Simple</span>
                 </h3>
 
@@ -157,23 +257,27 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="flex gap-6 items-center justify-center">
-                    <a href='/' className='btn-gradient text-white-100 rounded-lg px-5 py-3 flex items-center justify-center gap-3 hover:-translate-y-2 duration-200 hover:shadow-xl md:w-52'>
-                        Get Started
+                <div>
+                    <div className="flex gap-6 items-center justify-center">
+                        <a href='/' className='btn-gradient text-white-100 rounded-lg px-5 py-3 flex items-center justify-center gap-3 hover:-translate-y-2 duration-200 hover:shadow-xl md:w-52'>
+                            Get Started
 
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                        </svg>
-                    </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </a>
 
-                    <a href='/' className='border-2 border-blue-100 text-blue-100 rounded-lg px-5 py-3 flex items-center justify-center gap-3 hover:-translate-y-2 duration-200 hover:shadow-xl md:w-52'>
-                        Schedule Demo
+                        <a href='/' className='border-2 border-blue-100 text-blue-100 rounded-lg px-5 py-3 flex items-center justify-center gap-3 hover:-translate-y-2 duration-200 hover:shadow-xl md:w-52'>
+                            Schedule Demo
 
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                        </svg>
-                    </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p className='text-center text-black-50 mt-8'>14-Day Money-Back Guarantee</p>
                 </div>
+
 
             </div>
 
