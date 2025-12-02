@@ -124,52 +124,52 @@ export default function Home() {
                     Why <span className='text-blue-100'>Oxbey?</span>
                 </h3>
 
-                <div className='grid md:grid-cols-3 grid-cols-1 lg:grid-rows-2 grid-rows-1 justify-start items-end gap-8'>
-                    <div className='text-center space-y-3'>
-                        <img src={why1} alt='benefit' className='flex mx-auto w-96'></img>
-                        <h4 className='md:text-2xl text-xl font-medium'>Dedicated support</h4>
+                <div className='grid md:grid-cols-3 grid-cols-1 lg:grid-rows-2 grid-rows-1 justify-center items-end gap-8'>
+                    <div className='text-center space-y-5'>
+                        <img src={why3} alt='benefit' className='flex mx-auto w-56'></img>
+                        <h4 className='md:text-2xl text-xl font-medium'>Created By Experts</h4>
                         <p className='font-light lg:px-8'>
-                            Get expert email or video call support whenever you need it.
+                            Our team of expert content creators will produce eye-catching graphics, write engaging copy and schedule your posts for you every 14 days.
                         </p>
                     </div>
 
-                    <div className='text-center space-y-3'>
-                        <img src={why2} alt='benefit' className='flex mx-auto w-96'></img>
-                        <h4 className='md:text-2xl text-xl font-medium'>Dedicated support</h4>
+                    <div className='text-center space-y-5'>
+                        <img src={why4} alt='benefit' className='flex mx-auto w-72'></img>
+                        <h4 className='md:text-2xl text-xl font-medium'>100% Done-For-You</h4>
                         <p className='font-light lg:px-8'>
-                            Get expert email or video call support whenever you need it.
+                            We offer a 100% done-for-you service so you don’t have to create a thing. Simply review your scheduled posts twice a month in a matter of minutes!
                         </p>
                     </div>
 
-                    <div className='text-center space-y-3'>
-                        <img src={why3} alt='benefit' className='flex mx-auto w-96'></img>
-                        <h4 className='md:text-2xl text-xl font-medium'>Dedicated support</h4>
+                    <div className='text-center space-y-5'>
+                        <img src={why1} alt='benefit' className='flex mx-auto w-80'></img>
+                        <h4 className='md:text-2xl text-xl font-medium'>Unique Designs</h4>
                         <p className='font-light lg:px-8'>
-                            Get expert email or video call support whenever you need it.
+                            We create eye-catching designs in your company branding, featuring your logo, fonts and colours, specifically designed to grab your audience’s attention.
                         </p>
                     </div>
 
-                    <div className='text-center space-y-3'>
-                        <img src={why4} alt='benefit' className='flex mx-auto w-96'></img>
-                        <h4 className='md:text-2xl text-xl font-medium'>Dedicated support</h4>
+                    <div className='text-center space-y-5'>
+                        <img src={why5} alt='benefit' className='flex mx-auto w-72'></img>
+                        <h4 className='md:text-2xl text-xl font-medium'>Personal Dashboard</h4>
                         <p className='font-light lg:px-8'>
-                            Get expert email or video call support whenever you need it.
+                            You’ll have access to your own client portal and content scheduler, where you can manage your scheduled posts, run reports or publish additional content yourself.
                         </p>
                     </div>
 
-                    <div className='text-center space-y-3'>
-                        <img src={why5} alt='benefit' className='flex mx-auto w-96'></img>
-                        <h4 className='md:text-2xl text-xl font-medium'>Dedicated support</h4>
+                    <div className='text-center space-y-5'>
+                        <img src={why2} alt='benefit' className='flex mx-auto w-72'></img>
+                        <h4 className='md:text-2xl text-xl font-medium'>Remain In Control</h4>
                         <p className='font-light lg:px-8'>
-                            Get expert email or video call support whenever you need it.
+                            Suggest ideas, request revisions and tell us of any upcoming promotions directly through your client portal. We’ll be sure to include it all in your posts.
                         </p>
                     </div>
 
-                    <div className='text-center space-y-3'>
-                        <img src={why6} alt='benefit' className='flex mx-auto w-96'></img>
-                        <h4 className='md:text-2xl text-xl font-medium'>Dedicated support</h4>
+                    <div className='text-center space-y-5'>
+                        <img src={why6} alt='benefit' className='flex mx-auto w-64'></img>
+                        <h4 className='md:text-2xl text-xl font-medium'>Expert Support</h4>
                         <p className='font-light lg:px-8'>
-                            Get expert email or video call support whenever you need it.
+                            Got a question? You can email our Support Team whenever you like, or book a call to speak to someone directly if you prefer.
                         </p>
                     </div>
 
