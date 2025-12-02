@@ -14,7 +14,12 @@ import benefit6 from '../assets/benefit6.webp';
 import benefit7 from '../assets/benefit7.webp';
 import benefit8 from '../assets/benefit8.webp';
 import benefit9 from '../assets/benefit9.webp';
-
+import why1 from '../assets/why1.jpg';
+import why2 from '../assets/why2.jpg';
+import why3 from '../assets/why3.jpg';
+import why4 from '../assets/why4.jpg';
+import why5 from '../assets/why5.png';
+import why6 from '../assets/why6.jpg';
 import socials from '../assets/socials.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -119,7 +124,54 @@ export default function Home() {
                     Why <span className='text-blue-100'>Oxbey?</span>
                 </h3>
 
-                <div className='grid md:grid-cols-3 grid-cols-1 lg:grid-rows-2 grid-rows-1 justify-center lg:space-y-0 space-y-8'>
+                <div className='grid md:grid-cols-3 grid-cols-1 lg:grid-rows-2 grid-rows-1 justify-start items-end gap-8'>
+                    <div className='text-center space-y-3'>
+                        <img src={why1} alt='benefit' className='flex mx-auto w-96'></img>
+                        <h4 className='md:text-2xl text-xl font-medium'>Dedicated support</h4>
+                        <p className='font-light lg:px-8'>
+                            Get expert email or video call support whenever you need it.
+                        </p>
+                    </div>
+
+                    <div className='text-center space-y-3'>
+                        <img src={why2} alt='benefit' className='flex mx-auto w-96'></img>
+                        <h4 className='md:text-2xl text-xl font-medium'>Dedicated support</h4>
+                        <p className='font-light lg:px-8'>
+                            Get expert email or video call support whenever you need it.
+                        </p>
+                    </div>
+
+                    <div className='text-center space-y-3'>
+                        <img src={why3} alt='benefit' className='flex mx-auto w-96'></img>
+                        <h4 className='md:text-2xl text-xl font-medium'>Dedicated support</h4>
+                        <p className='font-light lg:px-8'>
+                            Get expert email or video call support whenever you need it.
+                        </p>
+                    </div>
+
+                    <div className='text-center space-y-3'>
+                        <img src={why4} alt='benefit' className='flex mx-auto w-96'></img>
+                        <h4 className='md:text-2xl text-xl font-medium'>Dedicated support</h4>
+                        <p className='font-light lg:px-8'>
+                            Get expert email or video call support whenever you need it.
+                        </p>
+                    </div>
+
+                    <div className='text-center space-y-3'>
+                        <img src={why5} alt='benefit' className='flex mx-auto w-96'></img>
+                        <h4 className='md:text-2xl text-xl font-medium'>Dedicated support</h4>
+                        <p className='font-light lg:px-8'>
+                            Get expert email or video call support whenever you need it.
+                        </p>
+                    </div>
+
+                    <div className='text-center space-y-3'>
+                        <img src={why6} alt='benefit' className='flex mx-auto w-96'></img>
+                        <h4 className='md:text-2xl text-xl font-medium'>Dedicated support</h4>
+                        <p className='font-light lg:px-8'>
+                            Get expert email or video call support whenever you need it.
+                        </p>
+                    </div>
 
                 </div>
 
