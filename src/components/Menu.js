@@ -63,7 +63,7 @@ export default function Menu() {
         </div>
       </div>
 
-      <div className="lg:hidden flex items-center justify-between p-6">
+      <div className="lg:hidden flex items-center justify-between">
         <a href="/" className="">
           <img src={logo} alt="Logo" className='w-32' />
         </a>

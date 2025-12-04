@@ -11,7 +11,6 @@ import slide6 from "../assets/review6.png";
 import slide7 from "../assets/review7.png";
 import slide8 from "../assets/review8.png";
 
-// Custom arrow components
 const NextArrow = (props) => {
     const { className, style, onClick } = props;
     return (
@@ -62,7 +61,7 @@ function ImageSlider() {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    dots: true,
+                    dots: false,
                     infinite: true,
                 }
             },
@@ -71,7 +70,7 @@ function ImageSlider() {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    dots: true,
+                    dots: false,
                     infinite: true,
                     autoplay: true,
                     autoplaySpeed: 2000,

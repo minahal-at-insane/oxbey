@@ -8,6 +8,12 @@ html {
   background-position: 100% 0;
 }
 
+.bg-wave{
+  background-image: url(../src/assets/wave-background.png);
+  background-position: top;
+  background-size: cover;
+}
+
 .slick-slide {
   padding: 10px;
 }

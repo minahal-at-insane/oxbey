@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 function Footer() {
     return (
         <footer>
-            <div className="lg:px-20 px-5 lg:pt-12 py-6 btn-gradient text-white-100">
+            <div className="lg:px-20 px-5 lg:pt-12 py-8 btn-gradient text-white-100">
                 <div className="container mx-auto">
-                    <div className='flex items-start justify-between'>
+                    <div className='flex flex-wrap items-start md:justify-between justify-center gap-6'>
                         <nav>
                             <ul className="flex justify-center gap-6 items-center">
                                 <li><Link to="/" className='hover:text-blue-100 duration-150'>Home</Link></li>
