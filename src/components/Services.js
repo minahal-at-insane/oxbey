@@ -23,103 +23,118 @@ import 'aos/dist/aos.css';
 
 function Services() {
 
-      useEffect(() => {
+    useEffect(() => {
         AOS.init({
-          duration: 600,
+            duration: 600,
         });
-      }, [])
+    }, [])
 
     const Services = [
         {
             img: service1,
-            title: "Premium quality",
-            desc: "Professional, high-quality social media content that get results.",
+            title: "Search Engine Optimization (SEO)",
+            desc: "On-page, Off-page, Technical, LocalImproves your website’s visibility on search engines by optimizing content, structure, and authority",
         },
         {
             img: service2,
-            title: "Super-fast delivery",
-            desc: "Receive your first batch of content within 5 business days.",
+            title: "SEM / PPC",
+            desc: "Drives instant traffic using paid ads that target the right audience at the perfect time",
         },
         {
             img: service3,
-            title: "Fixed monthly rate",
-            desc: "One flat fee with no surprises or hidden costs each month.",
+            title: "Social Media Marketing (SMM)",
+            desc: "Builds brand presence and engagement across platforms using strategic content and targeted advertising",
         },
         {
-            img: service2,
-            title: "Unlimited revisions",
-            desc: "Request as many tweaks as you need until you are satisfied.",
+            img: service4,
+            title: "Content Marketing",
+            desc: "RAttracts and educates your audience through valuable content that builds trust and credibility",
         },
         {
             img: service5,
-            title: "Flexible & scalable",
-            desc: "Easily upgrade, downgrade or cancel your plan anytime.",
+            title: "Email Marketing",
+            desc: "Nurtures leads and boosts sales through personalized messages, automated flows, and timely offers",
         },
         {
             img: service6,
-            title: "Team collaboration",
-            desc: "Invite unlimited team members to suggest ideas and give feedback.",
+            title: "Web Design & Development",
+            desc: "Creates visually appealing, user-friendly websites that look great and perform smoothly on all devices",
         },
         {
             img: service7,
-            title: "Consistent branding",
-            desc: "Premium content that matches your brand style and tone.",
+            title: "Conversion Rate Optimization (CRO)",
+            desc: "Improves conversion rates by testing designs, optimizing funnels, and enhancing the overall user experience",
         },
         {
             img: service8,
-            title: "Unique and yours",
-            desc: "Every piece of content is 100% owned by you for you to reuse however you like.",
+            title: "Analytics & Reporting",
+            desc: "Tracks website performance, user behavior, and campaign results to guide smarter business decisions",
         },
         {
             img: service9,
-            title: "Dedicated support",
-            desc: "Get expert email or video call support whenever you need it.",
+            title: "Influencer Marketing",
+            desc: "Boosts brand awareness through creators who authentically promote your products to their audience",
         },
-          {
+        {
             img: service10,
-            title: "Dedicated support",
-            desc: "Get expert email or video call support whenever you need it.",
+            title: "Online Reputation Management (ORM)",
+            desc: "Manages your online reputation by monitoring reviews and maintaining a positive brand image",
         },
-          {
+        {
             img: service11,
-            title: "Dedicated support",
-            desc: "Get expert email or video call support whenever you need it.",
+            title: "Affiliate Marketing",
+            desc: "Expands your reach using partners who promote your brand in exchange for commissions",
         },
-          {
+        {
             img: service12,
-            title: "Dedicated support",
-            desc: "Get expert email or video call support whenever you need it.",
+            title: "Marketing Automation",
+            desc: "Streamlines marketing processes using automated systems that save time and improve customer journeys",
         },
-          {
+        {
             img: service13,
-            title: "Dedicated support",
-            desc: "Get expert email or video call support whenever you need it.",
+            title: "Video Marketing",
+            desc: "Engages audiences through high-impact video content tailored for different platforms and formats",
         },
-          {
+        {
             img: service14,
-            title: "Dedicated support",
-            desc: "Get expert email or video call support whenever you need it.",
+            title: "Mobile Marketing",
+            desc: "Reaches customers directly on their phones with targeted messages and app-based campaigns",
         },
-          {
+        {
             img: service15,
-            title: "Dedicated support",
-            desc: "Get expert email or video call support whenever you need it.",
+            title: "E-commerce Marketing",
+            desc: "Drives online sales through targeted ads, optimized product pages, and automated email strategies",
         },
     ];
 
     return (
 
-        <section className="lg:px-20 px-5 lg:py-12 py-6">
+        <section className="lg:px-20 px-5 lg:py-20 py-6 font-inter">
             <div className='container mx-auto'>
 
                 <Menu />
 
                 <div className="grid md:grid-cols-3 grid-cols-1 lg:grid-rows-3 grid-rows-1 items-center justify-center md:gap-10 gap-8">
                     {Services.map((item, index) => (
-                        <div key={index} className="text-center space-y-3">
-                            <img src={item.img} alt="benefit" className="w-20 flex mx-auto" />
-                            <h4 className="md:text-2xl text-xl font-medium">{item.title}</h4>
-                            <p className="font-light lg:px-8">{item.desc}</p>
+                        <div
+                            key={index}
+                            className="relative group text-center bg-[#f5f5f5] p-8 h-80 rounded-md shadow-md overflow-hidden transition-colors duration-300"
+                        >
+                            <span className="absolute bottom-0 left-0 w-full h-2 bg-blue-100 transition-all duration-300 group-hover:h-full"></span>
+
+                            <div className="relative z-10 space-y-5 group-hover:text-white-100">
+                                <img
+                                    src={item.img}
+                                    alt="benefit"
+                                    className="w-20 flex mx-auto transition duration-200 group-hover:invert group-hover:brightness-0"
+                                />
+                                <h4 className="md:text-xl text-lg font-semibold font-poppins transition duration-200">
+                                    {item.title}
+                                </h4>
+                                <p className="lg:px-8 transition duration-200">
+                                    {item.desc}
+                                </p>
+                            </div>
                         </div>
                     ))}
                 </div>
