@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Footer() {
     return (
         <footer>
-            <div className='md:pb-16 pb-8 container mx-auto px-5'>
+            <div className='md:pb-16 pb-8 container mx-auto px-5 font-poppins'>
                 <div data-aos='fade-up' className='text-center pb-12'>
                     <p className='md:text-5xl text-3xl text-center font-semibold'>Social media, <span className='text-blue-100'>simplified</span></p>
                 </div>
@@ -38,10 +38,10 @@ function Footer() {
                     <div className='flex flex-wrap items-start md:justify-between justify-center gap-6'>
                         <nav>
                             <ul className="flex justify-center gap-6 items-center">
-                                <li><Link to="/" className='hover:text-blue-100 duration-150'>Home</Link></li>
-                                <li><Link to="/pricing" className='hover:text-blue-100 duration-150'>Pricing</Link></li>
-                                <li><Link to="/services" className='hover:text-blue-100 duration-150'>Services</Link></li>
-                                <li><Link to="/contact" className='hover:text-blue-100 duration-150'>Contact</Link></li>
+                                <li><Link to="/" className=''>Home</Link></li>
+                                <li><Link to="/pricing" className=''>Pricing</Link></li>
+                                <li><Link to="/services" className=''>Services</Link></li>
+                                <li><Link to="/contact" className=''>Contact</Link></li>
                             </ul>
                         </nav>
 

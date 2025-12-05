@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import service from '../assets/service/service.png';
 import service1 from '../assets/service/service1.png';
 import service2 from '../assets/service/service2.png';
 import service3 from '../assets/service/service3.png';
@@ -19,6 +20,7 @@ import service15 from '../assets/service/service15.png';
 import Menu from './Menu'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Footer from './Footer';
 
 
 function Services() {
@@ -109,10 +111,27 @@ function Services() {
 
     return (
 
-        <section className="lg:px-20 px-5 lg:py-20 py-6 font-inter">
-            <div className='container mx-auto'>
+        <div>
+            <div className='lg:px-20 px-5 lg:py-20 py-6 font-poppins container mx-auto text-black-50'>
 
                 <Menu />
+
+                <div className='flex items-center justify-between gap-8 lg:lg:py-20 py-8'>
+                    <div className='lg:w-1/2 space-y-8'>
+
+                        <h1 className='md:text-5xl text-3xl font-bold lg:leading-snug'>
+                            The <span className='text-blue-100'>Services</span> We Provide For You
+                        </h1>
+
+                        <p>
+                            OXBEY has a powerhouse team of skilled, experienced developers who know how to tackle complex web problems with confidence and precision. We’ve delivered solutions across multiple industries, earning trust and recognition from countless project owners who rely on our expertise, consistency, and commitment to high-quality results.
+                        </p>
+                    </div>
+
+                    <div className='lg:w-1/2'>
+                        <img src={service} alt='services-img' className='float-right'></img>
+                    </div>
+                </div>
 
                 <div className="grid md:grid-cols-3 grid-cols-1 lg:grid-rows-3 grid-rows-1 items-center justify-center md:gap-10 gap-8">
                     {Services.map((item, index) => (
@@ -128,7 +147,7 @@ function Services() {
                                     alt="benefit"
                                     className="w-20 flex mx-auto transition duration-200 group-hover:invert group-hover:brightness-0"
                                 />
-                                <h4 className="md:text-xl text-lg font-semibold font-poppins transition duration-200">
+                                <h4 className="md:text-xl text-lg font-semibold transition duration-200">
                                     {item.title}
                                 </h4>
                                 <p className="lg:px-8 transition duration-200">
@@ -139,7 +158,9 @@ function Services() {
                     ))}
                 </div>
             </div>
-        </section>
+
+            <Footer />
+        </div>
 
     );
 }
