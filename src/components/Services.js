@@ -15,6 +15,9 @@ import service12 from '../assets/service/service12.png';
 import service13 from '../assets/service/service13.png';
 import service14 from '../assets/service/service14.png';
 import service15 from '../assets/service/service15.png';
+import polygon from '../assets/service/polygon-2.png';
+import circle from '../assets/service/circle-2.png';
+
 
 
 import Menu from './Menu'
@@ -116,7 +119,7 @@ function Services() {
 
                 <Menu />
 
-                <div className='flex items-center justify-between gap-8 lg:lg:py-20 py-8'>
+                <div className='lg:flex items-center justify-between gap-8 py-12 lg:space-y-0 space-y-10 lg:h-screen'>
                     <div className='lg:w-1/2 space-y-8'>
 
                         <h1 className='md:text-5xl text-3xl font-bold lg:leading-snug'>
@@ -128,9 +131,16 @@ function Services() {
                         </p>
                     </div>
 
+
                     <div className='lg:w-1/2'>
-                        <img src={service} alt='services-img' className='float-right'></img>
+                        <img src={polygon} className='invert brightness-75 w-24 absolute right-16 mt-60 lg:block hidden'></img>
+
+                        <img src={service} alt='services-img' className='lg:float-right lg:w-10/12'></img>
+
+                        <img src={circle} className='invert brightness-75 w-12 absolute right-1/3 -mt-12 lg:block hidden'></img>
                     </div>
+
+
                 </div>
 
                 <div className="grid md:grid-cols-3 grid-cols-1 lg:grid-rows-3 grid-rows-1 items-center justify-center md:gap-10 gap-8">

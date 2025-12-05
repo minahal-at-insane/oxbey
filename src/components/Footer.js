@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Footer() {
     return (
         <footer>
-            <div className='md:pb-16 pb-8 container mx-auto px-5 font-poppins'>
+            <div className='md:pb-16 py-8 container mx-auto px-5 font-poppins'>
                 <div data-aos='fade-up' className='text-center pb-12'>
                     <p className='md:text-5xl text-3xl text-center font-semibold'>Social media, <span className='text-blue-100'>simplified</span></p>
                 </div>
