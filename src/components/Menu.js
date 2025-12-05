@@ -4,12 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function Menu() {
 
-  const [isOpen, setIsopen] = useState(false);
-  // const [show, setShow] = useState(false);
-
-  const ToggleSidebar = () => {
-    isOpen === true ? setIsopen(false) : setIsopen(true);
-  }
+  const [isOpen, setIsOpen] = useState(false)
+  const ToggleSidebar = () => setIsOpen(!isOpen)
 
   const [showHeader, setShowHeader] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
@@ -35,7 +31,7 @@ export default function Menu() {
 
   return (
 
-    <header>
+    <header className='container mx-auto'>
 
       <div
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"
@@ -51,6 +47,7 @@ export default function Menu() {
               <li><Link to="/" className='hover:text-blue-100 duration-150'>Home</Link></li>
               <li><Link to="/pricing" className='hover:text-blue-100 duration-150'>Pricing</Link></li>
               <li><Link to="/services" className='hover:text-blue-100 duration-150'>Services</Link></li>
+              <li><Link to="/our-work" className='hover:text-blue-100 duration-150'>Our Work</Link></li>
               <li><Link to="/contact" className='hover:text-blue-100 duration-150'>Contact</Link></li>
             </ul>
           </nav>
@@ -69,20 +66,31 @@ export default function Menu() {
         </a>
 
         <button onClick={ToggleSidebar} className="nav cursor-pointer">
-
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-          </svg>
-
+          {isOpen ? (
+            // CROSS ICON
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            // HAMBURGER ICON
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          )}
         </button>
       </div>
 
-      <div className={`sidebar ${isOpen === true ? 'active' : ''} bg-blue-100 border text-white-100 rounded-md`}>
+      <div className={`sidebar ${isOpen === true ? 'active' : ''} bg-white-100 border border-white-200 text-black-50 rounded-md`}>
         <div className='p-6'>
           <ul onClick={ToggleSidebar} className='space-y-8'>
             <li><Link to="/" className='hover:text-blue-100 duration-150'>Home</Link></li>
             <li><Link to="/pricing" className='hover:text-blue-100 duration-150'>Pricing</Link></li>
             <li><Link to="/services" className='hover:text-blue-100 duration-150'>Services</Link></li>
+            <li><Link to="/our-work" className='hover:text-blue-100 duration-150'>Our Work</Link></li>
             <li><Link to="/contact" className='hover:text-blue-100 duration-150'>Contact</Link></li>
           </ul>
         </div>

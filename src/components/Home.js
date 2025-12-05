@@ -35,6 +35,7 @@ import 'aos/dist/aos.css';
 import Faq from './Faq';
 import ImageSlider from './ImageSlider';
 import Footer from './Footer';
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
@@ -283,13 +284,17 @@ export default function Home() {
                         Our <span className='text-blue-100'>Work</span>
                     </h2>
 
-                    <div className='grid md:grid-cols-3 grid-cols-1 lg:grid-rows-2 grid-rows-1 justify-center items-end gap-12'>
+                    <div className='grid md:grid-cols-3 grid-cols-1 lg:grid-rows-2 grid-rows-1 justify-center items-center mx-auto gap-12 justify-items-center'>
                         {workItems.map((item, idx) => (
                             <div key={idx}>
                                 <img src={item.img} alt='work' className={`rounded-xl shadow-md`} />
                             </div>
                         ))}
                     </div>
+
+                          <Link to="/our-work" className='btn-gradient text-white-100 rounded-lg px-5 py-3 flex text-center hover:-translate-y-2 duration-200 hover:shadow-xl md:w-52 w-full mx-auto mt-12 justify-center'>
+                           See More
+                        </Link>
 
                     <div>
 

@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Pricing from './components/Pricing';
+import Work from './components/Work';
 
 
 
@@ -13,6 +14,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/our-work" element={<Work />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
   );
