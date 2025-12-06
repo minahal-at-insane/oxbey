@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import service from '../assets/service/service.png';
+import bg_services from '../assets/service/bg_services.svg';
 import service1 from '../assets/service/service1.png';
 import service2 from '../assets/service/service2.png';
 import service3 from '../assets/service/service3.png';
@@ -115,7 +116,10 @@ function Services() {
     return (
 
         <div>
-            <div className='lg:px-20 px-5 lg:py-20 py-6 font-poppins container mx-auto text-black-50'>
+            <div className=''>
+                <img src={bg_services} alt='bg' className='invert brightness-75 absolute top-0 left-0 right-0'></img>
+            </div>
+            <div className='lg:px-20 px-5 lg:py-20 py-6 font-poppins container mx-auto text-black-50 relative z-10'>
 
                 <Menu />
 
