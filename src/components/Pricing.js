@@ -101,9 +101,9 @@ function Pricing() {
               </span>
 
               <div className='space-y-5'>
-                <p className='font-semibold md:text-2xl text-xl'>{pack.name}</p>
-                <h2 className='text-blue-100 font-semibold md:text-3xl text-xl'>
-                  £<span className='font-extrabold md:text-5xl text-2xl'>{pack.price}</span>/mo
+                <p className='font-semibold text-xl'>{pack.name}</p>
+                <h2 className='text-blue-100 font-semibold md:text-2xl text-xl'>
+                  £<span className='font-extrabold md:text-4xl text-2xl'>{pack.price}</span>/mo
                 </h2>
               </div>
 
@@ -114,11 +114,11 @@ function Pricing() {
                   <p className='font-medium italic'>{pack.platforms}</p>
                 </div>
 
-                <div className='space-y-4 font-xs'>
+                <div className='space-y-4 text-sm'>
                   {pack.perks.map((perk, i) => (
                     <div key={i} className='flex items-start gap-2'>
                       <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-blue-100 translate-y-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-blue-100">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
                       </div>
@@ -127,7 +127,7 @@ function Pricing() {
                   ))}
                 </div>
 
-                <p className="text-lg pb-4">
+                <p className="pb-4">
                   <strong>Best For:</strong> {pack.best_for}
                 </p>
 

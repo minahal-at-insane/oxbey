@@ -32,7 +32,7 @@ function Footer() {
             </div>
 
             <div className="lg:px-20 px-5 lg:pt-28 py-8 btn-gradient text-white-100 font-poppins">
-                <div className="container mx-auto space-y-20">
+                <div className="container mx-auto space-y-16">
 
                     <div className="flex flex-wrap items-start md:justify-between justify-center gap-6">
                         <div>
@@ -54,8 +54,9 @@ function Footer() {
 
                     <div className='flex flex-wrap items-start md:justify-between justify-center gap-6'>
 
-                        <div>
+                        <div className='flex items-center gap-5'>
                             <a href=''>Privacy Policy</a>
+                            <a href=''>Terms & Conditions</a>
                         </div>
 
                         <nav>
