@@ -12,7 +12,7 @@ function Footer() {
             <div className='md:py-16 py-8 container mx-auto px-5 font-poppins text-black-50'>
 
                 <div className='flex flex-wrap items-center mx-auto absolute bg-white-100 left-0 right-0 md:justify-between justify-center gap-5 md:w-8/12 shadow p-6 rounded-lg border border-white-200 z-20'>
-                    <div data-aos='fade-right' className=''>
+                    <div className=''>
                         <p className='md:text-2xl text-xl font-semibold'>Social media, <span className='text-blue-100'>simplified</span></p>
 
                         <p className='mt-5'>14-Day Money-Back Guarantee</p>

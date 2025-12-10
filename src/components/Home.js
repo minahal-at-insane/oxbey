@@ -228,9 +228,9 @@ export default function Home() {
     ]
 
     return (
-        <div className="font-poppins overflow-hidden text-black-50">
+        <div className="font-poppins overflow-hidden text-black-50 ">
 
-            <section className="lg:px-20 px-5 lg:py-12 py-6">
+            <section className="lg:px-28 px-5 lg:py-12 py-6">
                 <div className='container mx-auto'>
 
                     <Menu />

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import work1 from '../assets/work/work1.png';
 import work2 from '../assets/work/work2.png';
 import work3 from '../assets/work/work3.png';
@@ -20,17 +20,21 @@ import work18 from '../assets/work/work18.png';
 import work19 from '../assets/work/work19.png';
 import work20 from '../assets/work/work20.png';
 import work21 from '../assets/work/work21.png';
-
+import work22 from '../assets/work/work22.png';
+import work23 from '../assets/work/work23.png';
+import work24 from '../assets/work/work24.png';
+import work25 from '../assets/work/work25.png';
+import work26 from '../assets/work/work26.png';
 import logo from '../assets/logo.png';
 import save from '../assets/save.svg';
 import like from '../assets/like.svg';
 import comment from '../assets/comment.svg';
 import share from '../assets/share.webp';
-
 import bg_services from '../assets/service/bg_services.svg';
 import Menu from './Menu'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Footer from './Footer';
 
 
 function Work() {
@@ -42,78 +46,64 @@ function Work() {
   }, [])
 
   const workItems = [
-    { img: work1 },
-    { img: work2 },
-    { img: work3 },
-    { img: work4 },
-    { img: work5 },
-    { img: work6 },
-    { img: work7 },
-    { img: work8 },
-    { img: work9 },
-    { img: work10 },
-    { img: work11 },
-    { img: work12 },
-    { img: work13 },
-    { img: work14 },
-    { img: work15 },
-    { img: work16 },
-    { img: work17 },
-    { img: work18 },
-    { img: work19 },
-    { img: work20 },
-    { img: work21 },
-
-
+    { img: work1 }, { img: work2 }, { img: work3 }, { img: work4 }, { img: work5 },
+    { img: work6 }, { img: work7 }, { img: work8 }, { img: work9 }, { img: work10 },
+    { img: work11 }, { img: work12 }, { img: work13 }, { img: work14 }, { img: work15 },
+    { img: work16 }, { img: work17 }, { img: work18 }, { img: work19 }, { img: work20 },
+    { img: work21 }, { img: work22 }, { img: work23 }, { img: work24 }, { img: work25 },
+    { img: work26 }
   ]
+
+  const [visible, setVisible] = useState(8);
+
+  const loadMore = () => {
+    setVisible(prev => prev + 8);
+  };
 
   return (
     <div>
       <div className=''>
         <img src={bg_services} alt='bg' className='invert brightness-75 absolute top-0 left-0 right-0'></img>
       </div>
-      <section className="lg:px-20 px-5 lg:py-12 py-6 font-poppins text-black-50">
+      <section className="lg:px-20 px-5 lg:py-20 py-6 font-poppins text-black-50 relative z-20">
         <div className='container mx-auto'>
 
           <Menu />
 
-          <div className='space-y-6 text-center md:pt-28 py-8'>
-            <h1 className='md:text-5xl text-3xl font-bold lg:leading-snug uppercase'>
-              OUR <span className='text-blue-100'>work</span>
-            </h1>
+          <div className='flex items-center justify-between lg:h-screen'>
+            <div className='space-y-6 py-8 lg:w-1/2'>
+              <h1 className='md:text-5xl text-3xl font-bold lg:leading-snug uppercase'>
+                OUR <span className='text-blue-100'>work</span>
+              </h1>
 
-            <p className='flex mx-auto lg:w-8/12 space-y-3 leading-loose'>
-              Oxbey doesn’t do copy-paste solutions. Your brand has its own vibe, goals, and story — and your digital presence should match that energy. Our service packages are built to support businesses of all sizes, from growing startups to established companies that want to level up.
-              <br></br><br></br>
-              And if you need something more tailored, just hit us up. We’ll craft a custom package designed exactly around your needs.
-            </p>
-          </div>
-
-          <div className='grid grid-cols-2 gap-6 mx-auto' style={{ maxWidth: '800px' }}>
-
-            <div>
-              <img src={work1} alt='work' className='rounded-xl shadow-md' />
+              <p className='space-y-3 leading-loose'>
+                Oxbey doesn’t do copy-paste solutions. Your brand has its own vibe, goals, and story — and your digital presence should match that energy. Our service packages are built to support businesses of all sizes, from growing startups to established companies that want to level up.
+                <br></br>
+                And if you need something more tailored, just hit us up. We’ll craft a custom package designed exactly around your needs.
+              </p>
             </div>
 
-            <div className='grid grid-cols-2 gap-6 mx-auto justify-center'>
+            <div className='grid grid-cols-2 gap-6 mx-auto lg:w-1/2' style={{ maxWidth: '420px' }}>
               <img src={work3} alt='work' className='rounded-xl shadow-md' />
               <img src={work4} alt='work' className='rounded-xl shadow-md' />
               <img src={work5} alt='work' className='rounded-xl shadow-md' />
               <img src={work6} alt='work' className='rounded-xl shadow-md' />
             </div>
-
-            <div>
-              <img src={work2} alt='work' className='rounded-xl shadow-md' />
-            </div>
-
-            <div>
-              <img src={work3} alt='work' className='rounded-xl shadow-md' />
-            </div>
           </div>
 
-          <div className='grid grid-cols-4 gap-6 mx-auto py-12'>
-            {workItems.map((item, idx) => (
-              <div className='bg-white-100 rounded-2xl shadow-md'>
+          <div className='space-y-6 text-center py-8'>
+            <h1 className='md:text-4xl text-3xl font-bold lg:leading-snug uppercase'>
+              Examples of our <span className='text-blue-100'>work</span>
+            </h1>
+
+            <p className='flex mx-auto lg:w-8/12 space-y-3 leading-loose'>
+              Get your design & marketing work done without the hassle of unreliable freelancers, costly agencies. Pay a fixed, monthly, and predictable rate, with no contracts or surprises.
+            </p>
+          </div>
+
+          <div className='grid grid-cols-4 gap-5 mx-auto py-6'>
+            {workItems.slice(0, visible).map((item, idx) => (
+              <div className='rounded-xl work-item bg-black-25'>
                 <div className='flex items-center justify-between p-3 border-b border-white-200'>
                   <img src={logo} alt='' className='w-24' />
                   <p className='text-3xl -translate-y-3'>...</p>
@@ -138,8 +128,21 @@ function Work() {
             ))}
           </div>
 
+          {visible < workItems.length && (
+            <div className='text-center mt-6'>
+              <button
+                onClick={loadMore}
+                className='btn-gradient text-white-100 rounded-lg px-5 py-3 flex text-center shadow-lg duration-200 hover:shadow-xl md:w-44 w-full mx-auto justify-center'
+              >
+                Load More
+              </button>
+            </div>
+          )}
+
         </div>
       </section >
+
+      <Footer />
     </div >
   );
 }
