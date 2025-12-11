@@ -123,7 +123,7 @@ function Services() {
 
                 <Menu />
 
-                <div className='lg:flex items-center justify-between gap-8 py-12 lg:space-y-0 space-y-10 lg:h-screen'>
+                <div className='lg:flex items-center justify-between gap-8 py-6 lg:space-y-0 space-y-8 lg:h-screen'>
                     <div className='lg:w-1/2 space-y-8'>
 
                         <h1 className='md:text-5xl text-3xl font-bold lg:leading-snug'>
@@ -133,6 +133,24 @@ function Services() {
                         <p>
                             OXBEY has a powerhouse team of skilled, experienced developers who know how to tackle complex web problems with confidence and precision. We’ve delivered solutions across multiple industries, earning trust and recognition from countless project owners who rely on our expertise, consistency, and commitment to high-quality results.
                         </p>
+
+                        <div className="flex flex-wrap gap-6 items-center">
+                            <a href='/' className='btn-gradient text-white-100 rounded-lg px-5 py-3 flex items-center justify-center gap-3 hover:-translate-y-2 duration-200 hover:shadow-xl md:w-52 w-full'>
+                                Get Started
+
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                </svg>
+                            </a>
+
+                            <a href='/' className='border-2 border-blue-100 text-blue-100 rounded-lg px-5 py-3 flex items-center justify-center gap-3 hover:-translate-y-2 duration-200 hover:shadow-xl md:w-52 w-full'>
+                                Schedule Demo
+
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
 

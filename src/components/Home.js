@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Menu from './Menu'
-import img1 from '../assets/img1.gif';
+import img1 from '../assets/img3.gif';
 import a from '../assets/a.png';
 import b from '../assets/b.png';
 import c from '../assets/c.png';
@@ -235,10 +235,7 @@ export default function Home() {
 
                     <Menu />
 
-                    <div className='flex flex-wrap flex-row-reverse items-center justify-between mx-auto lg:space-y-0 space-y-12 lg:h-screen'>
-                        <div data-aos='zoom-in' className="lg:w-5/12 w-full">
-                            <img data-aos='zoom-in' data-aos-delay='100' src={img1} alt="" className='flex mx-auto w-full' />
-                        </div>
+                    <div className='flex flex-wrap items-center justify-between mx-auto lg:space-y-0 space-y-12 lg:h-screen pt-8'>
 
                         <div data-aos='fade-up' className="lg:w-6/12 w-full">
                             <h1 className='md:text-5xl text-2xl font-medium lg:[line-height:1.4]'>
@@ -273,6 +270,10 @@ export default function Home() {
                             <div>
                                 <img src={socials} className='md:w-1/2 pt-6'></img>
                             </div>
+                        </div>
+
+                         <div data-aos='zoom-in' className="lg:w-6/12 w-full">
+                            <img data-aos='zoom-in' data-aos-delay='100' src={img1} alt="" className='lg:w-10/12 flex mx-auto lg:float-right' />
                         </div>
                     </div>
 
