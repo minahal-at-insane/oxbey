@@ -88,10 +88,10 @@ function Pricing() {
         <div className="grid lg:grid-cols-3 grid-cols-1 items-center justify-center justify-items-center lg:gap-12 gap-16 pt-10">
           {packages.map((pack, index) => (
 
-            <div key={index} className='px-6 py-8 rounded-2xl shadow-xl space-y-6 relative z-20 bg-white-100'>
+            <div key={index} className='px-6 py-8 rounded-2xl shadow space-y-6 relative z-20 bg-white-100'>
 
               {pack.most_popular && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#FF0000] text-white-100 font-semibold px-4 py-1 rounded-full shadow-lg text-sm tracking-wide z-20">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#FF0000] text-white-100 font-semibold px-4 py-1 rounded-full shadow text-sm tracking-wide z-20">
                   Most Popular
                 </div>
               )}
