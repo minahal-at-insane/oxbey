@@ -119,7 +119,7 @@ function Work() {
 
           <Menu />
 
-          <div className='flex items-center justify-between lg:h-screen'>
+          <div className='flex flex-wrap items-center justify-between lg:h-screen'>
             <div className='space-y-6 py-8 lg:w-1/2'>
               <h1 className='md:text-5xl text-3xl font-bold lg:leading-snug uppercase'>
                 OUR <span className='text-blue-100'>work</span>
@@ -168,11 +168,11 @@ function Work() {
             </p>
           </div>
 
-          <div className='grid grid-cols-4 gap-5 mx-auto py-6'>
+          <div className='grid md:grid-cols-4 grid-cols-2 md:gap-5 gap-3 mx-auto py-6'>
             {workItems.slice(0, visible).map((item, idx) => (
               <div className='rounded-xl work-item bg-black-25'>
                 <div className='flex items-center justify-between p-3 border-b border-white-200'>
-                  <img src={logo} alt='' className='w-24' />
+                  <img src={logo} alt='' className='md:w-24 w-16' />
                   <p className='text-3xl -translate-y-3'>...</p>
                 </div>
 
@@ -182,13 +182,13 @@ function Work() {
 
                 <div className='flex items-center justify-between p-4 border-t border-white-200'>
                   <div className='flex items-center justify-start gap-3'>
-                    <img src={like} alt='' className='' />
-                    <img src={comment} alt='' className='' />
-                    <img src={share} alt='' className='w-[1.6rem]' />
+                    <img src={like} alt='' className=' w-4' />
+                    <img src={comment} alt='' className=' w-4' />
+                    <img src={share} alt='' className='md:w-[1.6rem] w-4' />
                   </div>
 
                   <div>
-                    <img src={save} alt='save' />
+                    <img src={save} alt='save'  className='w-4'/>
                   </div>
                 </div>
               </div>
@@ -216,7 +216,7 @@ function Work() {
                 Get your design & marketing work done without the hassle of unreliable freelancers, costly agencies. Pay a fixed, monthly, and predictable rate, with no contracts or surprises.
               </p>
 
-              <div className='grid grid-cols-4 gap-6 mx-auto py-6'>
+              <div className='grid md:grid-cols-4 grid-cols-2 gap-6 mx-auto py-6'>
                 {workVideo.slice(0, visible).map((item, idx) => (
                   <div key={idx} className='relative overflow-hidden flex justify-center shadow-md rounded-xl'>
                     <video src={item.video} autoPlay controls className='rounded-xl bg-blend-overlay bg-blue-100' />
