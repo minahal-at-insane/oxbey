@@ -174,23 +174,23 @@ export default function Home() {
     const steps = [
         {
             img: a,
-            title: "Sign up online",
-            desc: "Choose a plan that’s right for your business and sign up in just 2 minutes to begin receiving quality social media content, hassle-free!",
+            title: "Book a Free Consultation",
+            desc: "Get in touch with us and tell us about your business, goals, and challenges.",
         },
         {
             img: b,
-            title: "Sign up online",
-            desc: "Answer some questions about your business, upload content and tell us about your requirements so we can begin creating your posts!",
+            title: "Get a Custom Strategy",
+            desc: "We analyze your market and create a tailored digital marketing plan that fits your budget and objectives.",
         },
         {
             img: c,
-            title: "Sign up online",
-            desc: "Connect your social media profiles to your Content Scheduler – no need to share passwords! 100% secure connection.",
+            title: "We Launch & Optimize",
+            desc: "Our team starts implementing the strategy, continuously optimizing for better performance and results.",
         },
         {
             img: d,
-            title: "Sign up online",
-            desc: "You’ll receive your content within 5 business days. Log in to your Content Scheduler to review or edit your posts, or request a revision.",
+            title: "Track Growth & Results",
+            desc: "Receive clear reports and updates so you can see real growth in traffic, leads, and sales.",
         },
     ];
 
@@ -285,7 +285,7 @@ export default function Home() {
                         Our <span className='text-blue-100'>Work</span>
                     </h2>
 
-                    <div className='grid md:grid-cols-3 grid-cols-1 lg:grid-rows-2 grid-rows-1 justify-center items-center mx-auto gap-12 justify-items-center'>
+                    <div className='grid md:grid-cols-3 grid-cols-2 lg:grid-rows-2 grid-rows-1 justify-center items-center mx-auto md:gap-12 gap-6 justify-items-center'>
                         {workItems.map((item, idx) => (
                             <div key={idx}>
                                 <img src={item.img} alt='work' className={`rounded-xl shadow-md`} />
@@ -335,12 +335,12 @@ export default function Home() {
                         Simple, flexible, and affordable video creation designed to grow your brand.
                     </p>
 
-                    <div className="grid md:grid-cols-3 grid-cols-1 lg:grid-rows-3 grid-rows-1 items-center justify-center md:gap-10 gap-8">
+                    <div className="grid md:grid-cols-3 grid-cols-2 lg:grid-rows-3 grid-rows-1 items-center justify-items-center md:gap-10 gap-6">
                         {benefits.map((item, index) => (
                             <div key={index} className="text-center space-y-3">
-                                <img src={item.img} alt="benefit" className="w-20 flex mx-auto" />
-                                <h4 className="md:text-2xl text-xl font-medium">{item.title}</h4>
-                                <p className="font-light lg:px-8">{item.desc}</p>
+                                <img src={item.img} alt="benefit" className="md:w-20 w-10 flex mx-auto" />
+                                <h4 className="md:text-2xl text-sm font-medium">{item.title}</h4>
+                                <p className="font-light lg:px-8 md:text-md text-xs">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -350,7 +350,7 @@ export default function Home() {
             {/* Frustrated with Agencies section */}
 
             <div className="lg:py-20 py-6 lg:px-20 px-5 container mx-auto md:space-y-12 space-y-8">
-                <h3 className='text-center font-bold md:text-4xl text-2xl'>
+                <h3 className='text-center font-bold md:text-4xl text-xl'>
                     Frustrated with Agencies That<br></br>
                     <span className='text-blue-100'>Cost More and Deliver Less?</span>
                 </h3>
@@ -406,7 +406,7 @@ export default function Home() {
                 <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-center gap-8'>
                     {steps.map((item, idx) => (
                         <div key={idx} className='text-center space-y-3'>
-                            <img src={item.img} alt='step' className='md:w-32 w-28 flex mx-auto' />
+                            <img src={item.img} alt='step' className='md:w-32 w-20 flex mx-auto' />
                             <h4 className='text-xl font-medium'>{item.title}</h4>
                             <p className='text-black-50 font-light'>{item.desc}</p>
                         </div>
