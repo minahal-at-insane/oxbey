@@ -169,7 +169,7 @@ function Services() {
                     {Services.map((item, index) => (
                         <div
                             key={index}
-                            className="relative group text-center bg-[#f5f5f5] p-8 h-80 rounded-md shadow-md overflow-hidden transition-colors duration-300"
+                            className="relative group text-center bg-[#f5f5f5] p-8 md:h-80 rounded-md shadow-md overflow-hidden transition-colors duration-300"
                         >
                             <span className="absolute bottom-0 left-0 w-full h-2 bg-blue-100 transition-all duration-300 group-hover:h-full"></span>
 

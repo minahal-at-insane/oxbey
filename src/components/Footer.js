@@ -1,6 +1,6 @@
-import x from '../assets/x.png';
-import telegram from '../assets/telegram.png';
-import discord from '../assets/discord.png';
+import facebook from '../assets/facebook.png';
+import instagram from '../assets/instagram.webp';
+import linkedin from '../assets/linkedin.png';
 import { Link } from "react-router-dom";
 import logo from '../assets/logo.png';
 
@@ -11,7 +11,7 @@ function Footer() {
         <footer>
             <div className='md:py-16 py-8 container mx-auto px-5 font-poppins text-black-50'>
 
-                <div className='flex flex-wrap items-center mx-auto absolute bg-white-100 left-0 right-0 md:justify-between justify-center gap-5 md:w-8/12 shadow p-6 rounded-lg border border-white-200 z-20'>
+                <div className='flex flex-wrap items-center mx-auto lg:absolute bg-white-100 left-0 right-0 md:justify-between justify-center gap-5 md:w-8/12 shadow p-6 rounded-lg border border-white-200 z-20'>
                     <div className=''>
                         <p className='md:text-2xl text-xl font-semibold'>Social media, <span className='text-blue-100'>simplified</span></p>
 
@@ -32,22 +32,22 @@ function Footer() {
             </div>
 
             <div className="lg:px-20 px-5 lg:pt-28 py-8 btn-gradient text-white-100 font-poppins">
-                <div className="container mx-auto space-y-16">
+                <div className="container mx-auto md:space-y-16 space-y-8">
 
-                    <div className="flex flex-wrap items-start md:justify-between justify-center gap-6">
+                    <div className="flex items-start justify-between gap-6">
                         <div>
-                            <Link to='/'><img src={logo} alt='logo' className='w-48 invert brightness-0'></img></Link>
+                            <Link to='/'><img src={logo} alt='logo' className='md:w-48 w-32 invert brightness-0'></img></Link>
                         </div>
 
                         <div className="flex justify-center gap-3 items-center">
-                            <a href='/' className='p-3 rounded-xl bg-white-100'>
-                                <img src={x} alt='X' className='w-4 invert brightness-75'></img>
+                            <a href='https://www.facebook.com/share/17FzB988Ux/?mibextid=wwXIfr' className='md:p-2 p-1 rounded-lg bg-white-100'>
+                                <img src={facebook} alt='facebook' className='md:w-6 w-5'></img>
                             </a>
-                            <a href='/' className='p-3 rounded-xl bg-white-100'>
-                                <img src={telegram} alt='X' className='w-[18px] invert brightness-75'></img>
+                            <a href='https://www.instagram.com/oxbey_com?igsh=eHlsdDZwaHo4dG0x' className='md:p-2 p-1 rounded-lg bg-white-100'>
+                                <img src={instagram} alt='instagram' className='md:w-6 w-5'></img>
                             </a>
-                            <a href='/' className='p-3 rounded-xl bg-white-100'>
-                                <img src={discord} alt='X' className='w-[18px] invert brightness-75'></img>
+                            <a href='https://www.linkedin.com/company/oxbey/' className='md:p-2 p-1 rounded-lg bg-white-100'>
+                                <img src={linkedin} alt='linkedin' className='md:w-6 w-5'></img>
                             </a>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ function Footer() {
                         </div>
 
                         <nav>
-                            <ul className="flex justify-center gap-6 items-center">
+                            <ul className="flex flex-wrap justify-center gap-6 items-center md:text-base text-sm">
                                 <li><Link to="/" className=''>Home</Link></li>
                                 <li><Link to="/pricing" className=''>Pricing</Link></li>
                                 <li><Link to="/services" className=''>Services</Link></li>
